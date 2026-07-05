@@ -20,6 +20,7 @@ desktop.ini
 *~
 *.bak
 *.tmp
+sprints/
 
 # Node.js
 node_modules/
