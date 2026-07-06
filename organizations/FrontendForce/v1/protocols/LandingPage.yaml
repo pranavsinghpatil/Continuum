@@ -1,0 +1,7 @@
+﻿name: "Landing Page"
+description: "Protocol to build a standard landing page."
+steps:
+  - FF.LAYOUT
+  - FF.TYPOGRAPHY
+  - FF.COMPONENTS
+  - FF.ACCESSIBILITY
