@@ -1,0 +1,15 @@
+﻿[project]
+name = "continuum-os"
+version = "0.1.0"
+description = "Event-Driven Knowledge Operating System for AI Organizations"
+authors = [
+    {name = "Continuum Team", email = "hello@continuum.dev"}
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "PyYAML>=6.0.1",
+]
+
+[project.scripts]
+ct = "cli.ct:main"
