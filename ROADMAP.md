@@ -6,3 +6,4 @@
 - [x] **Phase 3: Runtime Kernel** (Events, Task Engine)
 - [x] **Phase 4: Organization Runtime** (Loaders, Execution Graph)
 - [x] **Phase 5: Frontend Force Alpha** (First full organization payload)
+- [x] **Phase 6: Knowledge Engine** (RAG, Context Builder)
