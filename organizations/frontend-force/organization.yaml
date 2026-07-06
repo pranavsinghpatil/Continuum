@@ -1,0 +1,32 @@
+﻿id: frontend-force
+
+version: 1.0.0
+
+organization_type: product-engineering
+
+mission: Build world-class frontend products.
+
+vision: Create interfaces comparable to the world's best software companies.
+
+director: Chief Frontend Officer
+
+departments:
+- Product
+- Design
+- Engineering
+- Quality
+- Governance
+
+knowledge:
+- Design Standards
+- Accessibility
+- Motion
+- Components
+- React
+- UX
+
+protocols:
+- Design Feature
+- Build Feature
+- Review Feature
+- Release Feature

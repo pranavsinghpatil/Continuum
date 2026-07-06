@@ -1,0 +1,7 @@
+﻿name: "Dashboard"
+description: "Protocol to build a web app dashboard."
+steps:
+  - FF.LAYOUT
+  - FF.NAVIGATION
+  - FF.COMPONENTS
+  - FF.ACCESSIBILITY

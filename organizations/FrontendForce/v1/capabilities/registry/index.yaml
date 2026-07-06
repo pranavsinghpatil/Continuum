@@ -1,0 +1,10 @@
+﻿FF.LAYOUT:
+  name: "Layout"
+FF.TYPOGRAPHY:
+  name: "Typography"
+FF.COMPONENTS:
+  name: "Components"
+FF.NAVIGATION:
+  name: "Navigation"
+FF.ACCESSIBILITY:
+  name: "Accessibility"
