@@ -27,7 +27,7 @@ Instead of writing complex custom scripts, you install a **Pack** (like `fronten
 
 ```bash
 # 1. Install the Continuum CLI
-npm install -g continuum
+npm install -g @continuum/cli
 
 # 2. Initialize a new workspace
 ct init acme

@@ -1,5 +1,5 @@
 {
-  "name": "continuum",
+  "name": "@continuum/cli",
   "version": "0.1.0",
   "description": "The Operating Kernel for AI Organizations. Install reusable AI organizations and run them on any execution provider.",
   "bin": {
