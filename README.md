@@ -1,17 +1,19 @@
-<div align="center">
+<p align="center">
   <img src="./assets/favicons/continuum.ico" alt="Continuum Logo" width="120" />
-  <br/>
-  <h1>Continuum</h1>
-
-  <p><strong>The Operating Kernel for AI Organizations</strong></p>
-
-  <p>Install reusable AI organizations. Run them on any execution provider.</p>
-
-  <p>
-    <a href="https://github.com/pranavsinghpatil/Continuum/releases"><img src="https://img.shields.io/github/v/release/pranavsinghpatil/Continuum?color=blue" alt="Release"></a>
-    <a href="https://github.com/pranavsinghpatil/Continuum/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License"></a>
-  </p>
-</div>
+</p>
+<h1 align="center">Continuum</h1>
+<p align="center">
+  <strong>The Operating Kernel for AI Organizations</strong><br>
+  Install reusable AI organizations. Run them on any execution provider.
+</p>
+<p align="center">
+  <a href="https://github.com/pranavsinghpatil/Continuum/releases">
+    <img src="https://img.shields.io/github/v/release/pranavsinghpatil/Continuum?color=blue" alt="Release">
+  </a>
+  <a href="https://github.com/pranavsinghpatil/Continuum/blob/main/LICENSE">
+    <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License">
+  </a>
+</p>
 
 <br/>
 
