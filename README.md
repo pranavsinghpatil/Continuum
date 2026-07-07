@@ -1,4 +1,4 @@
-<p align="center">
+﻿<p align="center">
   <img src="./assets/favicons/continuum.ico" alt="Continuum Logo" width="120" />
 </p>
 <h1 align="center">Continuum</h1>
@@ -27,7 +27,11 @@ Instead of writing complex custom scripts, you install a **Pack** (like `fronten
 
 ```bash
 # 1. Install the Continuum CLI
-npm install -g @continuum/cli
+git clone https://github.com/pranavsinghpatil/Continuum.git
+cd Continuum
+
+# Link the CLI globally
+cd apps/cli && npm link
 
 # 2. Initialize a new workspace
 ct init acme
@@ -43,18 +47,18 @@ ct run landing-page --prompt "Build an AI startup landing page"
 
 | Feature | Raw Agent | Continuum |
 | ------- | --------- | --------- |
-| **End-to-end Execution** | ❌ | ✅ |
-| **Accessibility Compliance** | ⚠️ | ✅ |
-| **Design Consistency** | ⚠️ | ✅ |
-| **Governance & Auditing** | ❌ | ✅ |
-| **Knowledge Reuse** | ❌ | ✅ |
+| **End-to-end Execution** | âŒ | âœ… |
+| **Accessibility Compliance** | âš ï¸ | âœ… |
+| **Design Consistency** | âš ï¸ | âœ… |
+| **Governance & Auditing** | âŒ | âœ… |
+| **Knowledge Reuse** | âŒ | âœ… |
 
 ### The Power of Packs
 When you run `ct add frontend-force`, you aren't just downloading scripts. You're downloading an entire organizational structure:
-- 📊 A **Product Strategist** that understands requirements gathering and user flows.
-- 📐 A **UX Architect** that builds component taxonomies and wireframes.
-- 💻 A **Frontend Engineer** that translates design tokens into pixel-perfect React.
-- ♿ An **Accessibility Auditor** that guarantees strict WCAG compliance.
+- ðŸ“Š A **Product Strategist** that understands requirements gathering and user flows.
+- ðŸ“ A **UX Architect** that builds component taxonomies and wireframes.
+- ðŸ’» A **Frontend Engineer** that translates design tokens into pixel-perfect React.
+- â™¿ An **Accessibility Auditor** that guarantees strict WCAG compliance.
 
 ## Architecture
 
@@ -98,3 +102,4 @@ To learn more about the Continuum architecture, developing your own packs, or co
 <div align="center">
   <sub>Built with precision and developer delight. Welcome to the future of AI workflows.</sub>
 </div>
+
