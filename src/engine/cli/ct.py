@@ -1,5 +1,6 @@
 ﻿import argparse
 import sys
+sys.stdout.reconfigure(encoding="utf-8")
 from engine.runtime import Runtime
 from engine.execution.router import ExecutionRouter
 from engine.execution.agents.demo import DemoExecutionProvider
