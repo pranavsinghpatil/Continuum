@@ -1,9 +1,17 @@
-﻿name: frontend-force
-version: 1.0.0
-description: "The ultimate frontend engineering organization pack."
-roles:
-  - Product Strategist
-  - UX Architect
-  - Visual Designer
-  - Frontend Engineer
-  - Accessibility Auditor
+﻿pack:
+  id: frontend-force
+  version: 1.0.0
+  description: "The ultimate frontend engineering organization pack."
+
+capabilities:
+  - layout
+  - typography
+  - accessibility
+
+protocols:
+  - landing-page
+  - dashboard
+
+knowledge:
+  - design-core
+  - accessibility-core
