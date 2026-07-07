@@ -1,9 +1,10 @@
-﻿import argparse
+import argparse
 import sys
 sys.stdout.reconfigure(encoding="utf-8")
 from engine.runtime import Runtime
 from engine.execution.router import ExecutionRouter
 from engine.execution.agents.demo import DemoExecutionProvider
+from engine.context.builder import ContextBuilder
 
 def main():
     parser = argparse.ArgumentParser(description="Continuum OS CLI")
@@ -31,6 +32,7 @@ def main():
         
         router = ExecutionRouter()
         router.register("demo", DemoExecutionProvider("."))
+        context_builder = ContextBuilder(".")
         
         # Hardcoded simulation of the protocol steps for the Alpha Demo
         steps = [
@@ -49,7 +51,7 @@ def main():
                 "task_id": task.id,
                 "role": role,
                 "capability": cap,
-                "context": runtime.context_builder.build_task_context(task.id, cap, ""),
+                "context": context_builder.build_task_context(task.id, cap, ""),
                 "prompt": args.prompt
             }
             
