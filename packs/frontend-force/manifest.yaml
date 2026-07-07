@@ -1,17 +1,14 @@
 ﻿pack:
-  id: frontend-force
+  id: pack.frontend-force
   version: 1.0.0
   description: "The ultimate frontend engineering organization pack."
 
+dependencies:
+  knowledge.design-core: ^1.0.0
+  knowledge.accessibility-core: ^1.0.0
+  protocol.landing-page: ^2.1.0
+
 capabilities:
-  - layout
-  - typography
-  - accessibility
-
-protocols:
-  - landing-page
-  - dashboard
-
-knowledge:
-  - design-core
-  - accessibility-core
+  - id: ff.capability.layout
+  - id: ff.capability.typography
+  - id: ff.capability.accessibility
