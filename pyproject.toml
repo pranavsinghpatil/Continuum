@@ -1,15 +1,16 @@
-﻿[project]
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
 name = "continuum-os"
 version = "0.1.0"
-description = "Event-Driven Knowledge Operating System for AI Organizations"
-authors = [
-    {name = "Continuum Team", email = "hello@continuum.dev"}
-]
+description = "The Operating System for AI Organizations"
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.9"
 dependencies = [
-    "PyYAML>=6.0.1",
+    "pyyaml"
 ]
 
 [project.scripts]
-ct = "cli.ct:main"
+ct = "engine.cli.main:main"
