@@ -1,11 +1,16 @@
-﻿<div align="center">
-  <!-- TODO: Insert Logo here -->
+<div align="center">
+  <img src="./assets/favicons/continuum.ico" alt="Continuum Logo" width="120" />
   <br/>
   <h1>Continuum</h1>
 
   <p><strong>The Operating Kernel for AI Organizations</strong></p>
 
   <p>Install reusable AI organizations. Run them on any execution provider.</p>
+
+  <p>
+    <a href="https://github.com/pranavsinghpatil/Continuum/releases"><img src="https://img.shields.io/github/v/release/pranavsinghpatil/Continuum?color=blue" alt="Release"></a>
+    <a href="https://github.com/pranavsinghpatil/Continuum/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License"></a>
+  </p>
 </div>
 
 <br/>
@@ -14,17 +19,23 @@
 
 Most developers use AI to generate code. **Continuum uses AI to generate organizations.**
 
-Continuum is not another LLM wrapper or LangChain alternative. It is an operating kernel and package manager for autonomous, multi-agent workflows. 
+Continuum is not another LLM wrapper, prompt chain, or LangChain alternative. It is an operating kernel and package manager for autonomous, multi-agent workflows. 
 
-Instead of writing complex prompt chains, you install a **Pack** (like rontend-force), which contains knowledge, capabilities, and protocols for an entire virtual engineering department.
+Instead of writing complex custom scripts, you install a **Pack** (like `frontend-force`), which contains the specialized knowledge, capabilities, and protocols to simulate an entire virtual engineering department.
 
-\\\ash
+```bash
+# 1. Install the Continuum CLI
 npm install -g @continuum/cli
 
+# 2. Initialize a new workspace
 ct init acme
+
+# 3. Add an intelligence pack
 ct add frontend-force
+
+# 4. Execute a specialized protocol
 ct run landing-page --prompt "Build an AI startup landing page"
-\\\
+```
 
 ## Why Continuum?
 
@@ -37,25 +48,51 @@ ct run landing-page --prompt "Build an AI startup landing page"
 | **Knowledge Reuse** | ❌ | ✅ |
 
 ### The Power of Packs
-When you run \ct add frontend-force\, you aren't just downloading code. You're downloading:
-- A **Product Strategist** that understands requirements gathering.
-- A **UX Architect** that builds component taxonomies.
-- A **Frontend Engineer** that translates design tokens into React.
-- An **Accessibility Auditor** that guarantees WCAG compliance.
+When you run `ct add frontend-force`, you aren't just downloading scripts. You're downloading an entire organizational structure:
+- 📊 A **Product Strategist** that understands requirements gathering and user flows.
+- 📐 A **UX Architect** that builds component taxonomies and wireframes.
+- 💻 A **Frontend Engineer** that translates design tokens into pixel-perfect React.
+- ♿ An **Accessibility Auditor** that guarantees strict WCAG compliance.
 
 ## Architecture
 
-Continuum is built on three pillars:
+Continuum is built on three robust pillars:
 
-1. **The Kernel**: Orchestrates Tasks, Events, Artifacts, and Workflows (The OS).
-2. **The Package Manager**: Resolves and installs Intelligence Packs (The App Store).
-3. **Execution Engines**: Pluggable providers like Claude Code, Gemini CLI, or Antigravity (The CPU).
+1. **The Kernel (The OS)**
+   Orchestrates Tasks, Events, Artifacts, and Workflows across the distributed execution layer.
+   
+2. **The Package Manager (The App Store)**
+   Resolves and installs Intelligence Packs using manifest-driven architecture, ensuring zero duplication of knowledge.
 
-Switching from Claude to Gemini does not require changing your organization. Your company's knowledge survives model updates.
+3. **Execution Engines (The CPU)**
+   Pluggable execution providers (like Claude Code, Gemini CLI, or Antigravity). Switching from Claude to Gemini does not require changing your organization. Your company's logic and workflows survive model updates.
+
+## Deep Dive into Packs
+
+Packs are semantically versioned and globally identified. A single Pack manifest looks like this:
+
+```yaml
+pack:
+  id: pack.frontend-force
+  version: 1.0.0
+
+dependencies:
+  knowledge.design-core: ^1.0.0
+  knowledge.accessibility-core: ^1.0.0
+  protocol.landing-page: ^2.1.0
+
+capabilities:
+  - id: ff.capability.layout
+  - id: ff.capability.typography
+  - id: ff.capability.accessibility
+```
+*When you install a pack, Continuum automatically resolves its entire dependency tree.*
 
 ## Getting Started
 
-Check out the full [Documentation](./docs/README.md) to build your first AI organization.
+To learn more about the Continuum architecture, developing your own packs, or contributing to the core kernel, check out our [Documentation](./docs/).
 
-## Roadmap
-See our [ROADMAP.md](./ROADMAP.md) for the journey to v1.0.
+---
+<div align="center">
+  <sub>Built with precision and developer delight. Welcome to the future of AI workflows.</sub>
+</div>
