@@ -1,4 +1,4 @@
-﻿<p align="center">
+<p align="center">
   <img src="./assets/favicons/continuum.ico" alt="Continuum Logo" width="120" />
 </p>
 <h1 align="center">Continuum</h1>
@@ -27,11 +27,7 @@ Instead of writing complex custom scripts, you install a **Pack** (like `fronten
 
 ```bash
 # 1. Install the Continuum CLI
-git clone https://github.com/pranavsinghpatil/Continuum.git
-cd Continuum
-
-# Link the CLI globally
-cd apps/cli && npm link
+npm install -g continuum
 
 # 2. Initialize a new workspace
 ct init acme

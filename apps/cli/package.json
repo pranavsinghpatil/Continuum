@@ -1,8 +1,33 @@
-﻿{
-  "name": "@continuum/cli",
+{
+  "name": "continuum",
   "version": "0.1.0",
+  "description": "The Operating Kernel for AI Organizations. Install reusable AI organizations and run them on any execution provider.",
   "bin": {
     "ct": "./bin/ct.js"
+  },
+  "keywords": [
+    "ai",
+    "agents",
+    "llm",
+    "multi-agent",
+    "workflow",
+    "continuum",
+    "orchestration",
+    "cli"
+  ],
+  "author": "Pranav Patil",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pranavsinghpatil/Continuum.git",
+    "directory": "apps/cli"
+  },
+  "bugs": {
+    "url": "https://github.com/pranavsinghpatil/Continuum/issues"
+  },
+  "homepage": "https://github.com/pranavsinghpatil/Continuum#readme",
+  "engines": {
+    "node": ">=18.0.0"
   },
   "dependencies": {
     "commander": "^11.0.0"
