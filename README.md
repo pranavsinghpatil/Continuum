@@ -1,42 +1,22 @@
-# Continuum
+﻿# Continuum
 
-> The Operating System for AI Organizations.
+**The Operating Kernel for AI Organizations.**
 
-Continuum is an open framework for designing, governing, and executing AI organizations.
+Continuum is not just another LLM prompt wrapper. It is a distributed execution layer, a package manager, and a governance kernel for multi-agent workflows.
 
-Instead of treating AI as a single assistant, Continuum models real-world organizations composed of specialized experts, governance councils, structured workflows, shared knowledge, and continuous improvement.
+## Getting Started
 
-Organizations built with Continuum collaborate like elite product companies rather than isolated AI agents.
+\\\ash
+npm install -g @continuum/cli
 
----
+ct init acme
+ct add frontend-force
+ct run landing-page --prompt "Build an AI startup landing page"
+\\\
 
-## Philosophy
+## Architecture
+- **Kernel**: Orchestrates Tasks, Events, Artifacts, and Workflows.
+- **Packs**: Installable intelligence (like \rontend-force\).
+- **Engines**: Execution providers (Claude Code, Gemini CLI, Python Workers).
 
-Great products are not built by individuals.
-
-They emerge from disciplined organizations.
-
-Continuum provides the architecture for building those organizations.
-
----
-
-## Core Components
-
-- Core
-- Organizations
-- Knowledge
-- Protocols
-- Runtime
-- Schemas
-
----
-
-## First Organization
-
-Frontend Force
-
----
-
-## Status
-
-🚧 Foundation Phase (v0.1)
+See the [ROADMAP.md](./ROADMAP.md) for our path to v1.0.
