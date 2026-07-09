@@ -1,0 +1,18 @@
+name: component-development
+description: A strict review-gated protocol for building individual React components (e.g., Sidebars, Navbars, Hero sections).
+steps:
+  - role: UX Architect
+    action: DRAFT_COMPONENT_SPEC
+    input: PROMPT
+    output: COMPONENT_SPEC
+    
+  - role: Chief Design Officer
+    action: REVIEW_AND_CRITIQUE
+    input: COMPONENT_SPEC
+    on_reject: return to UX Architect
+    description: "Ensure the component fits the existing global design system. Reject generic or unpolished designs."
+    
+  - role: Frontend Engineer
+    action: IMPLEMENT_COMPONENT
+    input: COMPONENT_SPEC
+    output: BUILD_ARTIFACTS

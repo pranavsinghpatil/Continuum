@@ -1,0 +1,41 @@
+name: landing-page
+description: End-to-end workflow for generating high-converting AI startup landing pages.
+steps:
+  - role: Product Strategist
+    action: RESEARCH_MARKET
+    tools: [WEB_SEARCH, COMPETITOR_ANALYSIS]
+    description: "Search the web for current design trends and successful competitor landing pages in the target domain."
+    input: PROMPT
+    output: MARKET_RESEARCH_STATE
+
+  - role: Product Strategist
+    action: INTERVIEW_USER
+    description: "Gather business context: Target audience, Core USP, and Call to Action (CTA)."
+    input: MARKET_RESEARCH_STATE
+    output: PRD_STATE
+
+  - role: UX Architect
+    action: DRAFT_WIREFRAME
+    input: PRD_STATE
+    output: WIREFRAME_STATE
+
+  - role: Chief Design Officer
+    action: REVIEW_AND_CRITIQUE
+    input: WIREFRAME_STATE
+    on_reject: return to UX Architect (Maximum 2 loops allowed)
+    description: "Enforce strict aesthetic standards. Reject anything generic. Demand premium layouts (e.g., bento grids, 3D elements, dark mode)."
+
+  - role: Visual Designer
+    action: GENERATE_TOKENS
+    input: WIREFRAME_STATE
+    output: DESIGN_SYSTEM_STATE
+
+  - role: Frontend Engineer
+    action: IMPLEMENT_REACT_APP
+    input: DESIGN_SYSTEM_STATE
+    output: BUILD_ARTIFACTS
+
+  - role: Accessibility Auditor
+    action: FINAL_QA
+    input: BUILD_ARTIFACTS
+    on_reject: return to Frontend Engineer

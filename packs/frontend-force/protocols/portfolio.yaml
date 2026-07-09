@@ -1,0 +1,23 @@
+name: portfolio
+description: Generate an elite portfolio website
+steps:
+  - role: Product Strategist
+    action: INTERVIEW_USER
+    description: "Gather required missing context: Experience, Core Projects, and Tech Stack preferences."
+    input: PROMPT
+    output: PRD_STATE
+
+  - role: UX Architect
+    action: DRAFT_WIREFRAME
+    input: PRD_STATE
+    output: WIREFRAME_STATE
+
+  - role: Chief Design Officer
+    action: REVIEW_AND_CRITIQUE
+    input: WIREFRAME_STATE
+    on_reject: return to UX Architect
+
+  - role: Frontend Engineer
+    action: IMPLEMENT_REACT_APP
+    input: WIREFRAME_STATE
+    output: BUILD_ARTIFACTS

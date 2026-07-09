@@ -1,0 +1,30 @@
+name: documentation-site
+description: Strict end-to-end protocol for building robust, unbroken documentation websites.
+steps:
+  - role: Product Strategist
+    action: DEFINE_INFORMATION_ARCHITECTURE
+    input: PROMPT
+    output: IA_STATE
+    description: "Map out the complete end-to-end user journey. Ensure every concept has a dedicated page and no orphan links exist."
+
+  - role: UX Architect
+    action: DESIGN_NAVIGATION
+    input: IA_STATE
+    output: NAV_STATE
+
+  - role: Chief Documentation Officer
+    action: REVIEW_AND_CRITIQUE
+    input: NAV_STATE
+    on_reject: return to UX Architect
+    description: "CRITICAL: Reject if the UX flow is broken. Reject if any core system concept is missing from the sidebar. The user must experience a flawless A-to-Z learning path."
+
+  - role: Frontend Engineer
+    action: IMPLEMENT_SITE
+    input: NAV_STATE
+    output: BUILD_ARTIFACTS
+
+  - role: QA Engineer
+    action: VALIDATE_LINKS_AND_FLOW
+    input: BUILD_ARTIFACTS
+    on_reject: return to Frontend Engineer
+    description: "Scan all markdown files. If a single broken link or dead-end page is found, reject the build immediately."

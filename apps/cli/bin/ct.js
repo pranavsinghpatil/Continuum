@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env node
+#!/usr/bin/env node
 const { spawnSync } = require('child_process');
 const path = require('path');
 
@@ -20,7 +20,7 @@ if (!command || command === 'help') {
     console.log('Usage: ct <command> [options]\n');
     console.log('Commands:');
     for (const [cmd, desc] of Object.entries(commands)) {
-        console.log(  \x1b[32m\\x1b[0m \);
+        console.log(`  \x1b[32m${cmd.padEnd(10)}\x1b[0m ${desc}`);
     }
     process.exit(0);
 }
@@ -45,17 +45,21 @@ if (command === 'create') {
     const validTypes = ['pack', 'workflow', 'protocol', 'benchmark', 'knowledge', 'provider', 'template', 'capability'];
     
     if (validTypes.includes(type)) {
-        console.log(✓ Created \: \);
-        console.log(✓ Assigned global ID: \.\);
-        console.log(✓ Initialized with version: 1.0.0);
+        console.log(`✓ Created ${type}: ${name}`);
+        console.log(`✓ Assigned global ID: ${type}.${name}`);
+        console.log(`✓ Initialized with version: 1.0.0`);
         process.exit(0);
     } else {
-        console.error(Unknown type to create. Try: ct create [\]);
+        console.error(`Unknown type to create. Try: ct create [${validTypes.join('|')}]`);
         process.exit(1);
     }
 }
 
 // Delegate everything else to the Python engine
 const pythonScript = path.resolve(__dirname, '../../../engines/python/src/engine/cli/ct.py');
-const result = spawnSync('python', [pythonScript, ...args], { stdio: 'inherit' });
+const pythonSrcPath = path.resolve(__dirname, '../../../engines/python/src');
+const result = spawnSync('python', [pythonScript, ...args], { 
+    stdio: 'inherit',
+    env: { ...process.env, PYTHONPATH: pythonSrcPath }
+});
 process.exit(result.status);

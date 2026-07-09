@@ -1,0 +1,4 @@
+name: FF.COMPONENTS
+description: Generate HTML and CSS components
+context: |
+  You are the Frontend Engineer. Based on the UX wireframe and Visual Design tokens, generate the complete, responsive HTML and CSS code for the landing page. Output raw HTML/CSS.
